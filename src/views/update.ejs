@@ -1,0 +1,143 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- Change the width below to just wider than your form's width
+    to optimize its initial scale on Apple iOS  and Android devices -->
+    <meta name="viewport" content="width=640">
+
+    <title>bay.org</title>
+
+</head>
+
+<style>
+    .user-profile {
+        width: 400px;
+        margin: 0 auto;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+        padding: 2em;
+        position: absolute;
+        top: 20%;
+        left: 35%;
+        z-index: 1;
+
+    }
+
+    .user-header {
+        background-color: #136051;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .user-header img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+
+    .user-title h2 {
+        margin: 0;
+    }
+
+    .user-details {
+        padding: 20px;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    tr {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    td {
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    i {
+        margin-right: 10px;
+    }
+</style>
+<body>
+<div class="user-profile">
+    <div class="user-header">
+        <form action="/update/<%= student._id%>" method="post">
+            <h1>Edit Information </h1>
+
+            <tr>
+                <td align="right" class="formLabel"> tên:<span class="req asterisk"></span></td>
+                <td align="left"><input type="text" autocapitalize="off" autocorrect="off" name="studentname" id="MERGE0"
+                                        size="25" value="<%= student.studentname%> ">
+                    <div class="error"></div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="formLabel"> id:<span class="req asterisk"></span></td>
+                <td align="left"><input type="text" autocapitalize="off" autocorrect="off" name="studentid" id="MERGE0"
+                                        size="25" value="<%= student.studentid%> ">
+                    <div class="error"></div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="formLabel"> điểm lý thuyết:<span class="req asterisk"></span></td>
+                <td align="left"><input type="text" autocapitalize="off" autocorrect="off" name="scorelt" id="MERGE0"
+                                        size="25" value="<%= student.scorelt%> ">
+                    <div class="error"></div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="formLabel"> điểm thực hành:<span class="req asterisk"></span></td>
+                <td align="left"><input type="text" autocapitalize="off" autocorrect="off" name="scoreth" id="MERGE0"
+                                        size="25" value="<%= student.scoreth%> ">
+                    <div class="error"></div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="formLabel"> mô tả:<span class="req asterisk"></span></td>
+                <td align="left"><input type="text" autocapitalize="off" autocorrect="off" name="access" id="MERGE0"
+                                        size="25" value="<%= student.access%> ">
+                    <div class="error"></div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="formLabel"> đánh giá:<span class="req asterisk"></span></td>
+                <td align="left"><input type="text" autocapitalize="off" autocorrect="off" name="description" id="MERGE0"
+                                        size="25" value="<%= student.description%> ">
+                    <div class="error"></div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="formLabel"> lớp:<span class="req asterisk"></span></td>
+                <td align="left"><input type="text" autocapitalize="off" autocorrect="off" name="class" id="MERGE0"
+                                        size="25" value="<%= student.class%> ">
+                    <div class="error"></div>
+                </td>
+            </tr>
+
+
+
+
+
+            <tr>
+                <td align="right"></td>
+                <td align="left">
+                    <input type="submit" class="button" name="submit" value="Update"/>
+
+            </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+
+</html>
